@@ -8,7 +8,7 @@ public class Jadge {
 	 * @param player2
 	 */
 	public void startJanken(Player player1,Player player2) {
-		if(player1.showHand() == player2.showHand()) {
+
 			System.out.println("**ジャンケン開始**");
 			
 			for(int cnt = 0; cnt < 3; cnt++) {
@@ -29,7 +29,7 @@ public class Jadge {
 			}else {
 				System.out.println("引き分け");
 			}
-		}
+
 	}
 	
 	/**

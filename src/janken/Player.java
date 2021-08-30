@@ -1,6 +1,6 @@
 package janken;
 
-public class Player {
+public class Player{
 	
 	public static final int stone = 0;
 	public static final int scissors = 1;
@@ -20,19 +20,28 @@ public class Player {
 		palyerName = name;
 	}
 	
+	private Tactics tactics;
+	
+	void setTactics(Tactics tactics1) {
+		tactics = tactics1;
+	}
+	
 	/**
 	 * ジャンケンの手を出す
 	 * @return じゃんけんの手
 	 */
 	public int showHand() {
-		double hand = Math.random() * 3;
-		if (hand < 1) {
-			return stone;
-		}else if (hand < 2) {
-			return scissors;
-		}else {
-			return paper;
-		}
+//		double hand = Math.random() * 3;
+//
+//		if (hand < 1) {
+//			return stone;
+//		}else if (hand < 2) {
+//			return scissors;
+//		}else {
+//			return paper;
+//		}
+		int hand = tactics.readTactics();
+		return hand;
 	}
 	
 	/**
