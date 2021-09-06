@@ -31,7 +31,26 @@ public class Hand {
 		return hand.size();
 	}
 	
-	public Card[] findSameNuberCard() {
+	public Card[] findSameNumberCard() {
+		int numberOfCards = hand.size();
+		Card[] sameCards = null;
 		
+		if(numberOfCards > 0) {
+			int lastIndex = numberOfCards - 1;
+			Card lastAddedCard = (Card)hand.get(lastIndex);
+			
+			int lastAddedCardNum = lastAddedCard.getNumber();
+			
+			for (int index = 0; index < lastIndex; index++) {
+				Card card = (Card) hand.get(index);
+				if(card.getNumber() == lastAddedCardNum) {
+					sameCards = new Card[2];
+					sameCards[0] = (Card) hand.remove(lastIndex);
+					sameCards[1] = (Card) hand.remove(index);
+					break;
+				}
+			}
+		}
+		return sameCards;
 	}
 }
