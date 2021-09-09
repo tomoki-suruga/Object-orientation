@@ -1,4 +1,4 @@
-package janken;
+package babanuki;
 
 import java.util.ArrayList;
 
@@ -52,5 +52,18 @@ public class Hand {
 			}
 		}
 		return sameCards;
+	}
+	public String toString() {
+		StringBuffer string = new StringBuffer();
+		
+		int size = hand.size();
+		if(size > 0) {
+			for(int index = 0; index < size; index++) {
+				Card card = (Card) hand .get(index);
+				string.append(card);
+				string.append("");
+			}
+		}
+		return string.toString();
 	}
 }

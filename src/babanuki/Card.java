@@ -1,4 +1,4 @@
-package janken;
+package babanuki;
 
 public class Card {
 	
