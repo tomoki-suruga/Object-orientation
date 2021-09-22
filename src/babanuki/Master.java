@@ -18,5 +18,14 @@ public class Master {
 			player.receiveCard(card);
 		}
 	}
+	
+	public void startGame() {
+		System.out.println("【ババ抜きを開始します】");
+		
+		for (int count = 0; players.size() > 1; count++) {
+			int playerIndex = count % players.size();
+			int nextPlayerIndex = (count+1) % players.size();
+		}
+	}
 
 }
