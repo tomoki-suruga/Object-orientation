@@ -59,7 +59,7 @@ public class Hand {
 		int size = hand.size();
 		if(size > 0) {
 			for(int index = 0; index < size; index++) {
-				Card card = (Card) hand .get(index);
+				Card card = (Card) hand.get(index);
 				string.append(card);
 				string.append("");
 			}

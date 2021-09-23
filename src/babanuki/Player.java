@@ -43,7 +43,7 @@ public class Player {
 		Card[] sameCards = myHand.findSameNumberCard();
 		
 		if(sameCards != null) {
-			System.out.println(this + ":");
+			System.out.print(this + ":");
 			table.disposeCard(sameCards);
 		}
 	}

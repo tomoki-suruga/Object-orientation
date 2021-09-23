@@ -55,6 +55,9 @@ public class Card {
 				case 13:
 					string.append("K");
 					break;
+				default:
+					string.append(number);
+					break;
 			}
 			
 		}else {
