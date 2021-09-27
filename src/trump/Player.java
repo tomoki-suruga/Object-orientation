@@ -1,4 +1,4 @@
-package babanuki;
+package trump;
 
 public class Player {
 	

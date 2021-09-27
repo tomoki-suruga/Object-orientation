@@ -1,4 +1,4 @@
-package babanuki;
+package trump;
 
 public class Card {
 	
@@ -8,8 +8,8 @@ public class Card {
 	public static final int SUIT_CLUB = 3;
 	public static final int SUIT_HEART = 4;
 	
-	public int suit;
-	public int number;
+	protected int suit;
+	protected int number;
 	
 	public Card(int suit, int number) {
 		this.suit = suit;
@@ -19,6 +19,10 @@ public class Card {
 	
 	public int getNumber() {
 		return number;
+	}
+	
+	public int getSuit() {
+		return suit;
 	}
 	
 	public String toString() {
@@ -59,9 +63,6 @@ public class Card {
 					string.append(number);
 					break;
 			}
-			
-		}else {
-			string.append("JOKER");
 		}
 		
 	return string.toString();
