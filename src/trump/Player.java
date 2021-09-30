@@ -29,14 +29,14 @@ public abstract class Player {
 //			System.out.println(this + ":残りの手札は" + myHand + "です");
 //		}
 //	}
-	
-	public Hand showHand() {
-		if(myHand.getNumberOfCards() == 1) {
-			master.declareWin(this);
-		}
-		myHand.shuffle();
-		return myHand;
-	}
+//	
+//	public Hand showHand() {
+//		if(myHand.getNumberOfCards() == 1) {
+//			master.declareWin(this);
+//		}
+//		myHand.shuffle();
+//		return myHand;
+//	}
 	
 	public void receiveCard(Card card) {
 		myHand.addCard(card);

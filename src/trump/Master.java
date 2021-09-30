@@ -12,7 +12,7 @@ public class Master {
 		int numberOfPlayers = players.size();
 		
 		for(int index = 0; index < numberOfCards; index++) {
-			Card card = cards.pickCard();
+			Card card = cards.pickCard(0);
 			
 			Player player = (Player)players.get(index % numberOfPlayers);
 			player.receiveCard(card);
@@ -20,7 +20,7 @@ public class Master {
 	}
 	
 	public void startGame() {
-		System.out.println("【ババ抜きを開始します】");
+		System.out.println("【ゲームを開始します】");
 		
 		for (int count = 0; players.size() > 1; count++) {
 			int playerIndex = count % players.size();
@@ -48,6 +48,14 @@ public class Master {
 	
 	public void registerPlayer(Player player) {
 		players.add(player);
+	}
+	
+	public void deregisterPlayer(Player player) {
+		players.remove(players.indexOf(player));
+		if (players.size() == 1) {
+			Player loser = (Player)players.get(0);
+			System.out.println(" " + loser + "さんの負け" );
+		}
 	}
 
 }
